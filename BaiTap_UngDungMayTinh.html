@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<h3> Calculator</h3>
+<input type="text" id="a">
+<input type="text" id="b">
+<br>
+<button onclick="tong()">Addition (+)</button>
+<button onclick="hieu()">Subtraction (-) </button>
+<button onclick="tich()">Multiplication (x) </button>
+<button onclick="thuong()">Division(/) </button>
+<p id="result"></p>
+</body>
+<script>
+    let x= document.getElementById("a").value
+    let y= document.getElementById("b").value
+
+    function tong () {
+        let x= document.getElementById("a").value;
+        let y= document.getElementById("b").value;
+        x = parseInt(x);
+        y = parseInt(y);
+        document.getElementById('result').innerHTML = "Result Addition: " +(x+y)
+    }
+    function hieu() {
+        let x= document.getElementById("a").value;
+        let y= document.getElementById("b").value;
+        document.getElementById('result').innerHTML = "Result Substraction: " +(x-y)
+    }function tich() {
+        let x= document.getElementById("a").value;
+        let y= document.getElementById("b").value;
+        document.getElementById('result').innerHTML = "Result Multiplication: " +(x*y)
+    }
+    function thuong() {
+        let x= document.getElementById("a").value;
+        let y= document.getElementById("b").value;
+        document.getElementById('result').innerHTML = "Result Division: " +(x/y)
+    }
+</script>
+</html>
